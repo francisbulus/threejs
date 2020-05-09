@@ -17,11 +17,18 @@
         0.1,
         1000
       );
-      var renderer = new THREE.WebGLRenderer({antialias: true});
-      renderer.setClearColor("#e5e5e5")
-      renderer.setSize(window.innerWidth, window.innerHeight)
+      var renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setClearColor("#e5e5e5");
+      renderer.setSize(window.innerWidth, window.innerHeight);
 
-      document.body.appendChild(renderer.domElement)
+      document.body.appendChild(renderer.domElement);
+
+      window.addEventListener("resize", () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectMatrix();
     </script>
   </body>
 </html>
