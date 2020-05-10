@@ -17,7 +17,7 @@
         0.1,
         1000
       );
-      camera.position.z = 5;
+      camera.position.z = 2;
       var renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setClearColor("#e5e5e5");
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -30,7 +30,7 @@
         camera.updateProjectionMatrix();
       });
 
-      var geometry = new THREE.SphereGeometry(1, 10, 10);
+      var geometry = new THREE.SphereGeometry(1, 4, 4);
       var material = new THREE.MeshLambertMaterial({ color: 0xffcc00 });
       var mesh = new THREE.Mesh(geometry, material);
 
